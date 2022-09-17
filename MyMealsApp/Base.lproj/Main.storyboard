@@ -124,8 +124,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qnb-5e-uLr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="g3t-fr-WKx">
                                 <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qnb-5e-uLr">
+                                <rect key="frame" x="10" y="44" width="300" height="387"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UVf-hc-MMk">
@@ -137,11 +140,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qnb-5e-uLr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Tk-Tg-GuL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g3t-fr-WKx" secondAttribute="bottom" id="7hc-wo-MFm"/>
                             <constraint firstItem="UVf-hc-MMk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BvU-IF-8yo"/>
+                            <constraint firstItem="g3t-fr-WKx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WQ3-yT-Rkq"/>
                             <constraint firstItem="UVf-hc-MMk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5H-3Q-3SO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qnb-5e-uLr" secondAttribute="trailing" id="hov-Bx-FdL"/>
+                            <constraint firstItem="g3t-fr-WKx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dmo-7e-85j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qnb-5e-uLr" secondAttribute="trailing" constant="10" id="hov-Bx-FdL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qnb-5e-uLr" secondAttribute="bottom" id="lMJ-pf-E9n"/>
-                            <constraint firstItem="qnb-5e-uLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="voZ-4x-YwW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g3t-fr-WKx" secondAttribute="trailing" id="rC6-6J-1lU"/>
+                            <constraint firstItem="qnb-5e-uLr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="voZ-4x-YwW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="List Meal" id="tWO-yC-xdf"/>
@@ -194,6 +201,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_1" width="416" height="416"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -21,7 +21,15 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        tableView.separatorStyle = .none
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        tableView.backgroundView = blurView
+        tableView.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        tableView.layer.cornerRadius = 12
         
         spinner.startAnimating()
         spinner.hidesWhenStopped = true
@@ -33,7 +41,7 @@ class ViewController: UIViewController {
             forCellReuseIdentifier: "MealCell"
         )
     }
-    
+
     func loopingMealList() {
         var index = 0
         while index <= 12 {
@@ -61,9 +69,11 @@ extension ViewController: UITableViewDataSource {
         cell.mealName.text = meal.mealName
         cell.mealCategory.text = meal.mealCategory
         cell.mealImage.downloadImage(from: meal.mealImage)
+        cell.backgroundColor = .clear
         
         return cell
     }
+    
 }
 
 extension ViewController: UITableViewDelegate {
@@ -78,4 +88,5 @@ extension ViewController: UITableViewDelegate {
         }
       }
     }
+    
 }
