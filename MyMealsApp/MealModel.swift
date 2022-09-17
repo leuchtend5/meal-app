@@ -1,9 +1,3 @@
-//
-//  MealModel.swift
-//  MyMealsApp
-//
-//  Created by Gilbert Tan on 31/08/22.
-//
 
 import Foundation
 

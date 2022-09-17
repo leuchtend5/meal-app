@@ -1,9 +1,3 @@
-//
-//  DetailViewController.swift
-//  MyMealsApp
-//
-//  Created by Gilbert Tan on 03/09/22.
-//
 
 import UIKit
 
@@ -34,6 +28,7 @@ class DetailViewController: UIViewController {
         }
         let ingredientString = ingredientArray.joined(separator: "\r\n")
         mealIngredients.text = ingredientString
+        
     }
 
 }

@@ -1,15 +1,9 @@
-//
-//  ViewController.swift
-//  MyMealsApp
-//
-//  Created by Gilbert Tan on 31/08/22.
-//
 
 import UIKit
 
 var mealModel = [MealModel]()
 
-class ViewController: UIViewController {
+class ListMealController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -57,7 +51,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension ListMealController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mealModel.count
     }
@@ -76,7 +70,7 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-extension ViewController: UITableViewDelegate {
+extension ListMealController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "moveToDetail", sender: self)
     }

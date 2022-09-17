@@ -1,9 +1,3 @@
-//
-//  TableViewCell.swift
-//  MyMealsApp
-//
-//  Created by Gilbert Tan on 02/09/22.
-//
 
 import UIKit
 
