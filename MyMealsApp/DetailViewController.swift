@@ -8,6 +8,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var mealInstructions: UILabel!
     @IBOutlet weak var mealName: UILabel!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var detailView: UIView!
+    
     var mealData: MealModel?
     
     override func viewDidLoad() {
@@ -28,6 +31,16 @@ class DetailViewController: UIViewController {
         }
         let ingredientString = ingredientArray.joined(separator: "\r\n")
         mealIngredients.text = ingredientString
+        
+        detailView.backgroundColor = .clear
+        
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        backgroundImage.addSubview(blurView)
+        
+        detailView.backgroundColor = UIColor(white: 0, alpha: 0.2)
+        
         
     }
 

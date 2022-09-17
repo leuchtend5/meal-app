@@ -23,8 +23,8 @@ class ListMealController: UIViewController {
         blurView.frame = self.view.bounds
         tableView.backgroundView = blurView
         tableView.backgroundColor = UIColor(white: 0, alpha: 0.2)
-        tableView.layer.cornerRadius = 12
         
+    
         spinner.startAnimating()
         spinner.hidesWhenStopped = true
         
