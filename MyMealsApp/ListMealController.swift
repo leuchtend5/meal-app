@@ -38,7 +38,7 @@ class ListMealController: UIViewController {
 
     func loopingMealList() {
         var index = 0
-        while index <= 12 {
+        while index <= 19 {
             dataManager.parseJSON {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
